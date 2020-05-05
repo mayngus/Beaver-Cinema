@@ -11,14 +11,10 @@ app.get('/', function(req, res) {
   res.render('home');
 });
 
-app.get('/other-page',function(req,res){
-  res.render('other-page');
+app.get('/index',function(req,res){
+  res.render('index');
 });
 
-
-app.get('/time',function(req,res){
-  res.render('time', genContext());
-});
 
 app.use(function(req,res){
   res.status(404);
