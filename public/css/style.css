@@ -1,289 +1,321 @@
+/*  =============================================
+    Global Layout Styles
+================================================ */
+
+/* ---- Forces padding/borders into container ---- */
+* {
+    box-sizing: border-box;
+}
+
+/*  =============================================
+    Fonts
+================================================ */
+@font-face {
+    font-family: 'Varela Round';
+    src: url('../fonts/VarelaRound-Regular.ttf') format('truetype');
+}
+
+/*  =============================================
+    Base Element Styles
+================================================ */
+
 body {
-  font-family: Roboto, Helvetica, sans-serif;
-  margin: 0;
-  background-color: #eee;
+    line-height: 1.6;
+    color: #3a3a3a;
+    font-family: 'Varela Round', sans-serif;
+    line-height: 1.6;
+    color: #3a3a3a;
+    background-color: #EAECEE;
+}
+
+p {
+    font-size: .95em;
+    margin-bottom: 1.5em;
+}
+
+h2,
+h3,
+a {
+    color: black;
+}
+
+h2,
+h3 {
+    margin-top: 0;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
-.site-title {
-  margin: 0;
-  padding: 10px 20px;
-  font-size: 30px;
-  font-weight: 100;
-  background-color: #319df6;
-  color: #fff;
+/*  =============================================
+    Base Layout Styles
+================================================ */
+
+/* ---- Navigation ---- */
+.name {
+    font-size: 1.25em;   /* remove all extra space above/below name heading */
 }
 
-.navbar {
-  background-color: #fff;
-  font-size: 18px;
-  line-height: 22px;
+.name,
+.main-nav li {
+    text-align: center;
+    background: #fff;
+    margin-top: 6px;
+    margin-bottom: 6px;
 }
 
-.navlist {
-  margin: 0 0 0 20px;
-  padding: 0;
+.main-nav {
+    font-size: 0;
 }
 
-.navitem {
-  display: inline-block;
+.main-nav li {
+    font-size: 1rem;
+    margin-right: 5px;
 }
 
-a {
-  color: #343434;
+.main-nav a {
+    font-size: .95em;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-a:hover,
-a:focus {
-  color: #319df6;
+.main-nav a:hover {
+    color: #ca3a3a;
 }
 
-a:focus {
-  outline: none;
+.name a,
+.main-nav a {
+    padding: 10px 15px;
+    display: block;
 }
 
-.navlink a {
-  padding: 8px 10px;
-  display: inline-block;
+/* ---- Layout Containers ---- */
+.c-header {
+    padding-left: 1em;
+    padding-right: 1em;
+    display: flex;
+    justify-content: space-between;
 }
 
-.navlink.active {
-  box-shadow: inset 0 -3px #319df6;
+.main-header {
+    background: 
+        red url("../images/background.jpg") center center;
+    background-size: cover;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    margin-bottom: 30px;
 }
 
-.navbar-search {
-  float: right;
-  margin-right: 20px;
-  padding: 0;
-  line-height: 38px;
+.main-footer {
+    text-align: center;
+    padding: 2em 0;
+    background: #C65E54;
+    color: white;
 }
 
-#navbar-search-input {
-  padding: 4px;
-  font-size: 16px;
-  background-color: #eee;
-  border: 1px solid #dadada;
-  border-radius: 2px;
+.main-footer ul li {
+    display: inline-block;
 }
 
-#navbar-search-input:focus {
-  outline: none;
-  background-color: #fff;
+/*  =============================================
+    Dropdown Menu
+================================================ */
+.dropdown {
+    position: relative;
 }
 
-#navbar-search-button {
-  margin-left: -5px;
-  font-size: 16px;
-  background: none;
-  border: none;
-  color: #343434;
-  cursor: pointer;
+.drop-nav {
+    position: absolute;
+    display: none;
 }
 
-#navbar-search-button:hover {
-  color: #319df6;
+.drop-nav li {
+    font-size: .8rem;
+    margin: 0 auto;
+    padding: 3px 18px;
+    border-bottom: 1px solid rgba(0, 0, 0, .8);
 }
 
-#navbar-search-button:focus {
-  color: #319df6;
-  outline: none;
+.dropdown:hover > .drop-nav {
+    display: block;
 }
 
-.movie-container {
-  margin: 50px 10%;
-  display: flex;
-  flex-wrap: wrap;
+/*  =============================================
+    Table Styling
+================================================ */
+td,
+th {
+    width: 4rem;
+    height: 2rem;
+    border: 1px solid #ccc;
+    text-align: center;
 }
 
-.movie {
-  flex: 0 1 28%;
-  display: flex;
-  margin: 2px;
-  padding: 20px;
-  border: 1px solid #dadada;
-  border-radius: 2px;
-  background-color: #fff;
+th {
+    background: black;
+    color: white;
+    border-color: white;
 }
 
-.movie-icon {
-  font-size: 24px;
+
+
+/*  =============================================
+    Search Bar
+================================================ */
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
 }
 
-.movie-content {
-  flex: 1 1 80%;
-  margin-left: 10px;
+.searchTerm {
+    width: 50%;
+    border: 3px solid darkred;
+    padding: 5px;
+    height: 40px;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+    color: black;
 }
 
-.movie-content p {
-  margin: 0;
+.searchButton {
+    width: 5%;
+    height: 40px;
+    border: 3px solid darkred;
+    background: darkred;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    font-size: 20px;
 }
 
-.movie-content .movie-author {
-  margin-top: 8px;
-  text-align: right;
-  font-weight: bold;
+.searchButton i:hover {
+    color: white;
 }
 
-#create-movie-button {
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-  height: 60px;
-  width: 60px;
-  border: none;
-  border-radius: 30px;
-  font-size: 30px;
-  background-color: #ff1010;
-  color: #fff;
-  cursor: pointer;
-  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
+.searchTitle {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.5rem;
 }
 
-#create-movie-button:hover,
-#create-movie-button:focus {
-  right: 27px;
-  bottom: 27px;
-  height: 66px;
-  width: 66px;
-  border-radius: 33px;
-  font-size: 36px;
-  background-color: #319df6;
+/*  =============================================
+    Footer Layout Styles
+================================================ */
+
+a.social {
+    display: inline-block;
+    text-indent: -9999px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+    opacity: .6;
+    transition: all .25s;
 }
 
-#create-movie-button:focus {
-  outline: none;
+a.social:hover {
+    opacity: 1;
 }
 
-#modal-backdrop {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.85);
+
+a.twitter {
+    background-image: url('../images/twitter.svg');
 }
 
-#create-movie-modal {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1010;
-  overflow: scroll;
+a.facebook {
+    background-image: url('../images/facebook.svg');
 }
 
-.hidden {
-  display: none;
+a.instagram {
+    background-image: url('../images/instagram.svg');
 }
 
-.modal-dialog {
-  width: auto;
-  max-width: 600px;
-  min-width: 350px;
-  min-height: 300px;
-  margin: 40px auto;
-  background-color: #fff;
-  border-radius: 15px;
+/*  =============================================
+    Clearfix "hack"
+================================================ */
+.group:after {
+    content: "";
+    display: table;
+    clear:both;
 }
 
-.modal-header {
-  position: relative;
-  padding: 10px 20px;
+/*  =============================================
+    Media Queries
+================================================ */
+
+/* ---- Only devices that are 769 pixels or wider ----  */
+@media (min-width: 769px) {
+
+    /* ---- Viewport Height for Sticky Footer ---- */
+    .wrap {
+        /* 100% of the viewport height minus fixed footer height */
+        min-height: calc(100vh -  129px);
+    }
+    
+    .container {
+        width: 80%;
+        max-width: 1150px;
+        margin: 0 auto;
+    }
+
+    .name,
+    .main-nav,
+    .main-nav li {
+        display: inline-block;
+    }
+
+    .name {
+        width: 240px;
+        margin-right: 50px;
+    }
 }
 
-.modal-header h3 {
-  margin: 0;
-  font-size: 28px;
+/*  =============================================
+    CSS Grid
+================================================ */
+.grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    /* grid-auto-rows:minmax(100px, auto); */
+    grid-gap:1em;
+    justify-items:stretch;
+    align-items:stretch;
+    margin-bottom: 50px;
 }
 
-.modal-close-button {
-  position: absolute;
-  right: 10px;
-  top: 5px;
-  font-size: 24px;
-  border: none;
-  background: none;
-  padding: 0;
-  cursor: pointer;
+.title {
+    max-height: 30px;
+    margin-bottom: 1rem;
 }
 
-.modal-body {
-  padding: 20px;
+.movies{
+    display:grid;
+    grid-template-columns: repeat(3, .5fr);
+    grid-auto-columns:minmax(100px, auto);
+    /* grid-gap:1em; */
+    justify-items:stretch;
+    align-items:stretch;
 }
 
-.movie-input-element {
-  display: flex;
-  align-items: center;
-  font-size: 20px;
-  margin: 10px 0;
+/* .movie-card {
+    border: 2px solid black;
+    border-radius: 10px;
+} */
+
+.movie-card h3 {
+    text-align: center;
 }
 
-.movie-input-element label {
-  font-weight: 600;
-  flex: 1 75px;
-  margin-right: 10px;
+.movie-card img {
+    width: 180px;
+    height: 250px;
+    display: block;
+    margin: 0 auto;
 }
 
-.movie-input-element input,
-.movie-input-element textarea {
-  flex: 6 200px;
-  padding: 8px;
-  font-size: 20px;
-  border: 1px solid #aaa;
-}
-
-.movie-input-element textarea {
-  min-height: 64px;
-}
-
-.modal-footer {
-  display: flex;
-  justify-content: flex-end;
-  padding: 10px 10px 20px 10px;
-}
-
-.modal-footer button {
-  font-size: 20px;
-  background-color: #fff;
-  color: #333;
-  border: 1px solid #333;
-  border-radius: 5px;
-  padding: 10px;
-  margin-right: 20px;
-  cursor: pointer;
-}
-
-.modal-footer .modal-cancel-button:hover {
-  background-color: #eee;
-}
-
-.modal-footer .modal-accept-button {
-  background-color: #319df6;
-  color: #fff;
-}
-
-.modal-footer .modal-accept-button:hover {
-  background-color: #087dde;
-}
-
-.error-container {
-  margin-top: 50px;
-  text-align: center;
-}
-
-.error-container h2 {
-  margin: 10px 0;
-  font-size: 96px;
-  font-weight: 100;
-}
-
-.error-container h3 {
-  margin: 10px 0;
-  font-size: 36px;
-  font-weight: 400;
+.movie-card img:hover {
+    box-shadow: 3px 3px 10px 1px rgba(100, 100, 100, .9);
 }

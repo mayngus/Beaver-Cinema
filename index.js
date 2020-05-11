@@ -13,10 +13,25 @@ app.get('/', function(req, res) {
   res.render('home');
 });
 
-app.get('/index',function(req,res){
-  res.render('index');
+app.get('/searc',function(req,res){
+  res.render('search');
 });
 
+app.get('/update',function(req,res){
+  res.render('update');
+});
+
+app.get('/movies',function(req,res){
+  res.render('movies');
+});
+
+app.get('/actors',function(req,res){
+  res.render('actors');
+});
+
+app.get('/genres',function(req,res){
+  res.render('genres');
+});
 
 app.use(function(req,res){
   res.status(404);
