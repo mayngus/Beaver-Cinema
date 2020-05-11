@@ -13,7 +13,7 @@ app.get('/', function(req, res) {
   res.render('home');
 });
 
-app.get('/searc',function(req,res){
+app.get('/search',function(req,res){
   res.render('search');
 });
 
