@@ -139,9 +139,9 @@ UNLOCK TABLES;
 --
 DROP TABLE IF EXISTS `genre`;
 CREATE TABLE `genre` (
-  `genre_id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(25) NOT NULL,
-  PRIMARY KEY (`genre_id`)
+	`genre_id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
+	`name` varchar(25) NOT NULL,
+	PRIMARY KEY (`genre_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=300 DEFAULT CHARSET=utf8;
 
 
