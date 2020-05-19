@@ -18,7 +18,7 @@ CREATE TABLE `customer` (
 	`phone` varchar(50) DEFAULT NULL,
 	`email` varchar(50) DEFAULT NULL,
 	PRIMARY KEY (`customer_id`),
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 --
 -- Insertion queries for table `customer`
@@ -40,7 +40,7 @@ CREATE TABLE `orders` (
 	`delivery` varchar(255) NOT NULL
 	PRIMARY KEY (`order_id`),
 	CONSTRAINT `fk_order_customer` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON UPDATE CASCADE,
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 --
 -- Insertion queries for table `orders`
@@ -66,7 +66,7 @@ CREATE TABLE `movie` (
 	`description` text,
 	PRIMARY KEY (`movie_id`),
 	CONSTRAINT `fk_movie_order` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`) ON UPDATE CASCADE,
-) ENGINE=InnoDB AUTO_INCREMENT=200 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=100 DEFAULT CHARSET=utf8;
 
 --
 -- Insertion queries for table `movie`
@@ -105,7 +105,7 @@ CREATE TABLE `actor` (
 	`last_name` varchar(45) NOT NULL,
 	PRIMARY KEY (`actor_id`),
 	KEY `idx_actor_first_name` (`first_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=200 DEFAULT CHARSET=utf8;
 
 --
 -- Insertion queries for table `actor`
@@ -142,7 +142,7 @@ CREATE TABLE `genre` (
   `genre_id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(25) NOT NULL,
   PRIMARY KEY (`genre_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=300 DEFAULT CHARSET=utf8;
 
 
 --
