@@ -30,3 +30,23 @@ UPDATE movie SET title = :titleInput, price = :priceInput, num_stock = :num_stoc
 -- delete a character
 DELETE FROM movie WHERE id = :movie_id_from_table_delete_form
 
+/********************************************************
+*	Data manipulations for "movie.php" page
+********************************************************/
+
+-- get all information from movies table
+SELECT title, price, num_stock, description FROM movie
+
+/********************************************************
+*	Data manipulations for "actor.php" page
+********************************************************/
+
+-- get all information from actors table
+SELECT first_name, last_name FROM actor
+
+/********************************************************
+*	Data manipulations for "genre.php" page
+********************************************************/
+
+-- get all information from actors table
+SELECT genre_name FROM genre
