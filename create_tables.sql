@@ -7,8 +7,8 @@
 --
 -- Table structure for table `Customer`
 --
+DROP TABLE IF EXISTS Customer;
 CREATE TABLE Customer(
-
  customerID int AUTO_INCREMENT UNIQUE PRIMARY KEY,
  cust_first_name varchar(255) NOT NULL,
  cust_last_name varchar(255) NOT NULL,
@@ -32,6 +32,7 @@ VALUES ('Jimmy', 'John', '4134 Monroe Ave', 'Corvallis', 'OR', 97330, 5034150290
 --
 -- Table structure for table `Orders`
 --
+DROP TABLE IF EXISTS Orders;
 CREATE TABLE Orders(
  orderID int AUTO_INCREMENT UNIQUE PRIMARY KEY,
  customerID int AUTO_INCREMENT,
@@ -57,6 +58,7 @@ INSERT INTO Orders (customerID, credit_number, credit_exp, order_date, delivery)
 --
 -- Table structure for table `Movies`
 --
+DROP TABLE IF EXISTS Movies;
 CREATE TABLE Movies(
  movieID int AUTO_INCREMENT UNIQUE PRIMARY KEY,
  orderID int DEFAULT NULL,
@@ -76,10 +78,10 @@ CREATE TABLE Movies(
 --
 INSERT INTO Movies (price, num_in_stock, movie_rating) VALUES (4.95, 23, 4.8); 
 
-
 --
 -- Table structure for table `Actors`
 --
+DROP TABLE IF EXISTS Actors;
 CREATE TABLE Actors(
  actorID int AUTO_INCREMENT NOT NULL UNIQUE PRIMARY KEY,
  actor_name varchar(255) NOT NULL
@@ -93,6 +95,7 @@ INSERT INTO Actors (actor_name) VALUES ('Evelyn Hancock');
 --
 -- Table structure for table `Genres`
 --
+DROP TABLE IF EXISTS Genres;
 CREATE TABLE Genres(
  movieID int AUTO_INCREMENT NOT NULL UNIQUE PRIMARY KEY,
  genre_type varchar(255) NOT NULL
