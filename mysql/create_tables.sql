@@ -63,7 +63,7 @@ CREATE TABLE `movie` (
 	`title` varchar(255) NOT NULL,
 	`price` decimal(5,2) NOT NULL DEFAULT '5.99',
 	`num_stock` int(11) unsigned DEFAULT NULL,
-	`description` text,
+	`movie_description` text,
 	PRIMARY KEY (`movie_id`),
 	CONSTRAINT `fk_movie_order` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`) ON UPDATE CASCADE,
 ) ENGINE=InnoDB AUTO_INCREMENT=100 DEFAULT CHARSET=utf8;
@@ -74,7 +74,6 @@ CREATE TABLE `movie` (
 LOCK TABLES `movie` WRITE;
 INSERT INTO `movie` VALUES (1, 1, 'Contagion', 7.99, 5, 'A virus unleashes onto an unprepared world.');
 UNLOCK TABLES;
-
 
 --
 -- Table structure for table `movie_orders`
@@ -133,17 +132,15 @@ LOCK TABLES `movie_actors` WRITE;
 INSERT INTO `movie_actors` VALUES (1,1), (1,2);
 UNLOCK TABLES;
 
-
 --
 -- Table structure for table `genre`
 --
 DROP TABLE IF EXISTS `genre`;
 CREATE TABLE `genre` (
 	`genre_id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
-	`name` varchar(25) NOT NULL,
+	`genre_name` varchar(25) NOT NULL,
 	PRIMARY KEY (`genre_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=300 DEFAULT CHARSET=utf8;
-
 
 --
 -- Insertion queries for table `genre`
