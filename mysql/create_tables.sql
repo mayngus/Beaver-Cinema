@@ -148,7 +148,7 @@ CREATE TABLE `genres` (
 -- Insertion queries for table `genres`
 --
 LOCK TABLES `genres` WRITE;
-INSERT INTO `genres` VALUES (1,'Action'),(2,'Comedy'),(3,'Science Fiction'),(4, 'Horror'),(5,'Romance'),(6,'Adventure'),(7,'Documentary'),(8,'Drama'), (9,'Fantasy');
+INSERT INTO `genres` VALUES (1,'Action'),(2,'Comedy'),(3,'Science Fiction'),(4, 'Horror'),(5,'Romance'),(6,'Thriller'),(7,'Documentary'),(8,'Drama'), (9,'Fantasy');
 UNLOCK TABLES;
 
 --
@@ -167,5 +167,5 @@ CREATE TABLE `movie_genres` (
 -- Insertion queries for table `movie_genres`
 --
 LOCK TABLES `movie_genres` WRITE;
--- INSERT INTO 
+INSERT INTO `movie_genres` VALUES (1, 6), (2, 6), (3, 5), (4, 6), (5, 4), (6, 6), (7, 4), (8, 6), (9, 4), (10, 4), (11, 8), (12, 9), (13, 3), (14, 7), (15, 9), (16, 2);
 UNLOCK TABLES;
