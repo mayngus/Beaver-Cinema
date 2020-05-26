@@ -36,6 +36,7 @@ CREATE TABLE `orders` (
 	`customer_id` int(11) unsigned NOT NULL,
 	`credit_number` int(11) NOT NULL,
 	`credit_exp` int(11) NOT NULL,
+	`amount` int(11) NOT NULL,
 	`order_date` datetime NOT NULL,
 	`delivery` varchar(255) NOT NULL
 	PRIMARY KEY (`order_id`),
@@ -59,7 +60,6 @@ INSERT INTO `orders` (customer_id, credit_number, credit_exp, order_date, delive
 DROP TABLE IF EXISTS `movie`;
 CREATE TABLE `movie` (
 	`movie_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-	`order_id` int(11) unsigned NOT NULL,
 	`title` varchar(255) NOT NULL,
 	`price` decimal(5,2) NOT NULL DEFAULT '5.99',
 	`num_stock` int(11) unsigned DEFAULT NULL,
@@ -72,7 +72,7 @@ CREATE TABLE `movie` (
 -- Insertion queries for table `movie`
 --
 LOCK TABLES `movie` WRITE;
-INSERT INTO `movie` VALUES (1, 1, 'Contagion', 7.99, 5, 'A virus unleashes onto an unprepared world.');
+INSERT INTO `movie` VALUES (1, 'Contagion', 7.99, 5, 'A virus unleashes onto an unprepared world.');
 UNLOCK TABLES;
 
 --
@@ -82,6 +82,7 @@ DROP TABLE IF EXISTS `movie_orders`;
 CREATE TABLE `movie_orders` (
 	`movie_id` int(11) unsigned NOT NULL,
 	`order_id` int(11) unsigned NOT NULL,
+	`quantity_ordered` int (11) unsigned NOT NULL 
 	PRIMARY KEY (`movie_id`,`order_id`),
 	CONSTRAINT `fk_movie_order_movie` FOREIGN KEY (`movie_id`) REFERENCES `movie` (`movie_id`) ON UPDATE CASCADE
 	CONSTRAINT `fk_order_movie_order` FOREIGN KEY (`order_id`) REFERENCES `order` (`order_id`) ON UPDATE CASCADE,
@@ -146,7 +147,7 @@ CREATE TABLE `genre` (
 -- Insertion queries for table `genre`
 --
 LOCK TABLES `genre` WRITE;
-INSERT INTO `genre` VALUES (1,'Action'),(2,'Comedy');
+INSERT INTO `genre` VALUES (1,'Action'),(2,'Comedy'),(3,'Science Fiction'),(4, 'Horror'),(5,'Romance'),(6,'Adventure'),(7,'Documentary'),(8,'Drama'), (9,'Fantasy');
 UNLOCK TABLES;
 
 --
