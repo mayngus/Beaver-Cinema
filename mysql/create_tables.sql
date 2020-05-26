@@ -112,7 +112,7 @@ CREATE TABLE `actor` (
 -- Insertion queries for table `actor`
 --
 LOCK TABLES `actor` WRITE;
-INSERT INTO `actor` VALUES (1,'Brad','Pitt'),(2,'Matt', 'Damon'),(3, 'Dustin', 'Hoffman'),(4, 'Nicholas', 'Hoult');
+INSERT INTO `actor` VALUES (1,'Brad','Pitt'),(2,'Matt', 'Damon'),(3, 'Dustin', 'Hoffman'),(4, 'Nicholas', 'Hoult'), (5, 'James', 'Olson'), (6, 'Al', 'Pacino'), (7, 'Joel', 'Edgerton'), (8, 'Elijah', 'Wood'), (9, 'Jake', 'Gyllenhaal'), (10, 'Mark','Wahlberg'), (11, 'Matthew', 'McConahay'), (12, 'Brian', 'Fogel'), (13, 'Robin', 'Williams'), (14, 'Will', 'Smith'), (15, 'Jennifer', 'Carpenter');
 UNLOCK TABLES;
 
 --
@@ -131,7 +131,7 @@ CREATE TABLE `movie_actors` (
 -- Insertion queries for table `movie_actors`
 --
 LOCK TABLES `movie_actors` WRITE;
--- INSERT INTO
+INSERT INTO `movie_actors` VALUES (1, 2), (2, 10), (3, 4), (4, 9), (5, 1), (6, 5), (7, 15), (8, 14), (9, 7), (10, 3), (11, 6), (12, 8), (13, 11), (14, 12), (15, 13);
 UNLOCK TABLES;
 
 --
