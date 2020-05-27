@@ -8,7 +8,7 @@
 ********************************************************/
 
 -- get all information from movies using the 'movie search' form
-SELECT title, price, num_stock, description FROM movie WHERE title = :title_ID_selected_from_search_bar
+SELECT title, price, num_stock, movie_description FROM movie WHERE title = :title_ID_selected_from_search_bar
 
 -- get all movie information from a searched up actor using actor's first name
 SELECT m.movie_id, m.title FROM m
@@ -22,7 +22,7 @@ ORDER BY m.movie_id ASC;
 ********************************************************/
 
 -- add a new movie
-INSERT INTO movie (title, price, num_stock, m_description) VALUES (:titleInput, :priceInput, :numStockInput, :descriptionInput)
+INSERT INTO movie (title, price, num_stock, movie_description) VALUES (:titleInput, :priceInput, :numStockInput, :descriptionInput)
 
 -- update a movie based on the table edit
 UPDATE movie SET title = :titleInput, price = :priceInput, num_stock = :num_stock, m_description = :descriptionInput WHERE id = :movie_id_from_table_update_form
@@ -35,7 +35,7 @@ DELETE FROM movie WHERE id = :movie_id_from_table_delete_form
 ********************************************************/
 
 -- get all information from movies table
-SELECT title, price, num_stock, description FROM movie
+SELECT title, price, num_stock, movie_description FROM movie
 
 /********************************************************
 *	Data manipulations for "actor.php" page
