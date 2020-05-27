@@ -98,11 +98,11 @@
 					</div>
 					<div class="form-group">
 						<label>Price</label>
-						<input type="text" name="price" class="form-control" value="Enter price $">
+						<input type="number" name="price" class="form-control" value="Enter price $">
 					</div>
 					<div class="form-group">
 						<label>Number in Stock</label>
-						<input type="text" name="num_stock" class="form-control" value="Enter stock">
+						<input type="number" name="num_stock" class="form-control" value="Enter stock">
 					</div>
 					<div class="form-group">
 						<label>Movie Description</label>
