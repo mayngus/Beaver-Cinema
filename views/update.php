@@ -92,6 +92,49 @@
 		</div>
 	</div>
 
+
+	<form action="update.php" method="POST">
+					<div class="form-group">
+						<label>Title</label>
+						<input type="text" name="title" class="form-control" value="Enter movie title">
+					</div>
+					<div class="form-group">
+						<label>Price</label>
+						<input type="text" name="price" class="form-control" value="Enter $">
+					</div>
+					<div class="form-group">
+						<label>Number in Stock</label>
+						<input type="text" name="num_stock" class="form-control" value="Enter number">
+					</div>
+					<div class="form-group">
+						<label>Movie Description</label>
+						<input type="text" name="movie_descripton" class="form-control" value="Enter number">
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary" name="save">Add</button>
+					</div>
+	</form>
+
+
+	<?php
+
+		include 'db_connection.php';
+		$conn = OpenCon();
+
+		$sql = "INSERT INTO Movies (title, price, num_stock, movie_descripton) 
+				VALUES ('$title', '$price', '$num_stock', '$movie_descripton')";
+		if(mysqli_query($link, $sql)){
+		    echo "Movie added successfully.";
+		} 
+		else{
+		    echo "ERROR: Unable to execute $sql. " . mysqli_error($link);
+		}
+
+		CloseCon($conn);
+
+	?>
+
+
 	<footer class="main-footer">
 	<div class="container">
 		<ul>
