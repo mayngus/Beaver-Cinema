@@ -62,27 +62,27 @@
 			<form action="" method="POST">
 				<div class="form-group">
 					<label>Title</label>
-					<input type="text" name="title" class="form-control" value="Enter movie title">
+					<input type="text" name="movie_title" class="form-control" value="Enter movie title">
 				</div>
 				<div class="form-group">
 					<label>Actor ID</label>
-					<input type="text" name="genre" class="form-control" value="Enter actor ID">
+					<input type="text" name="movie_genre" class="form-control" value="Enter actor ID">
 				</div>
 				<div class="form-group">
 					<label>Genre</label>
-					<input type="text" name="price" class="form-control" value="Enter genre">
+					<input type="text" name="movie_price" class="form-control" value="Enter genre">
 				</div>
 				<div class="form-group">
 					<label>Price</label>
-					<input type="text" name="rating" class="form-control" value="Enter $">
+					<input type="text" name="movie_rating" class="form-control" value="Enter $">
 				</div>
 				<div class="form-group">
 					<label>Rating</label>
-					<input type="text" name="rating" class="form-control" value="Enter rating (0.0)">
+					<input type="text" name="movie_rating" class="form-control" value="Enter rating (0.0)">
 				</div>
 				<div class="form-group">
 					<label>Number in Stock</label>
-					<input type="text" name="rating" class="form-control" value="Enter number">
+					<input type="text" name="movie_rating" class="form-control" value="Enter number">
 				</div>
 				<div class="form-group">
 					<button type="submit" class="btn btn-primary" name="save">Save</button>
