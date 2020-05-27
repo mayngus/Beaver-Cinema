@@ -123,11 +123,11 @@
 
 		$sql = "INSERT INTO Movies (title, price, num_stock, movie_descripton) 
 				VALUES ('$title', '$price', '$num_stock', '$movie_descripton')";
-		if(mysqli_query($link, $sql)){
+		if(mysqli_query($conn, $sql)){
 		    echo "Movie added successfully.";
 		} 
 		else{
-		    echo "ERROR: Unable to execute $sql. " . mysqli_error($link);
+		    echo "ERROR: Unable to execute $sql. " . mysqli_error($conn);
 		}
 
 		CloseCon($conn);
