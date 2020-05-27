@@ -88,12 +88,8 @@
 					<button type="submit" class="btn btn-primary" name="save">Save</button>
 				</div>
 			</form>
-			</div>
-		</div>
-	</div>
 
-
-	<form action="update.php" method="POST">
+			<form action="insert.php" method="POST">
 					<div class="form-group">
 						<label>Title</label>
 						<input type="text" name="title" class="form-control" value="Enter movie title">
@@ -113,26 +109,15 @@
 					<div class="form-group">
 						<button type="submit" class="btn btn-primary" name="save">Add</button>
 					</div>
-	</form>
+			</form>
 
 
-	<?php
+			</div>
+		</div>
+	</div>
 
-		include 'db_connection.php';
-		$conn = OpenCon();
 
-		$sql = "INSERT INTO Movies (title, price, num_stock, movie_descripton) 
-				VALUES ('$title', '$price', '$num_stock', '$movie_descripton')";
-		if(mysqli_query($conn, $sql)){
-		    echo "Movie added successfully.";
-		} 
-		else{
-		    echo "ERROR: Unable to execute $sql. " . mysqli_error($conn);
-		}
 
-		CloseCon($conn);
-
-	?>
 
 
 	<footer class="main-footer">
