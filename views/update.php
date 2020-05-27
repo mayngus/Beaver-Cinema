@@ -89,7 +89,7 @@
 				</div>
 			</form>
 
-			<form action="insert.php" method="POST">
+			<form action="insert.php" method="post">
 					<div class="form-group">
 						<label>Title</label>
 						<input type="text" name="title" class="form-control" value="Enter movie title">
