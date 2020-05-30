@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -16,7 +15,7 @@
 			<h1 class="name"><a href="index.php">Beaver Cinema</a></h1>
 				<ul class="main-nav">
 					<li><a href="views/search.php">Search</a></li>
-					<li><a href="views/update.php">Update</a></li>
+					<li><a href="update.php">Update</a></li>
 					<li class="dropdown">
 						<a href="#">Browse &#9660;</a>
 						<ul class="drop-nav">
