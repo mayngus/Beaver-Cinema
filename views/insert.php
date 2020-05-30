@@ -1,5 +1,5 @@
 <?php
-	include("phpmyadmin/db_connection.php");
+	include("../backend/db_connection.php");
 	$conn = OpenCon();
 
 	if(isset($_POST['save'])){
