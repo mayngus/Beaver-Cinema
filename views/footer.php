@@ -1,5 +1,5 @@
 <footer class="main-footer">
-	<div class="container">
+	<div class="container footer-container">
 		<ul>
 			<li><a href="#" class="social twitter">Twitter</a></li>
 			<li><a href="#" class="social facebook">Facebook</a></li>

@@ -104,15 +104,18 @@ CREATE TABLE `actor` (
 	`actor_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
 	`first_name` varchar(45) NOT NULL,
 	`last_name` varchar(45) NOT NULL,
+	`trademark` varchar(45) NOT NULL,
+	`birth_location` varchar(45) NOT NULL,
 	PRIMARY KEY (`actor_id`),
 	KEY `idx_actor_first_name` (`first_name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=200 DEFAULT CHARSET=utf8;
 
 --
 -- Insertion queries for table `actor`
+-- Additional information obtained from IMDB.com
 --
 LOCK TABLES `actor` WRITE;
-INSERT INTO `actor` VALUES (1,'Brad','Pitt'),(2,'Matt', 'Damon'),(3, 'Dustin', 'Hoffman'),(4, 'Nicholas', 'Hoult'), (5, 'James', 'Olson'), (6, 'Al', 'Pacino'), (7, 'Joel', 'Edgerton'), (8, 'Elijah', 'Wood'), (9, 'Jake', 'Gyllenhaal'), (10, 'Mark','Wahlberg'), (11, 'Matthew', 'McConahay'), (12, 'Brian', 'Fogel'), (13, 'Robin', 'Williams'), (14, 'Will', 'Smith'), (15, 'Jennifer', 'Carpenter');
+INSERT INTO `actor` VALUES (1,'Brad','Pitt','Chiseled good looks','Oklahoma, USA'),(2,'Matt', 'Damon','Has older brother who sculpts', 'Massachusetts, USA'),(3, 'Dustin', 'Hoffman', 'Known as being a perfectionist', 'Los Angeles, USA'),(4, 'Nicholas', 'Hoult','Has distinctive vulcan eyebrows','Berkshire, UK'), (5, 'James', 'Olson','Discovered while acting in a local play in New York','Illinois, USA'), (6, 'Al', 'Pacino','Jet black hair and dark owl eyes','New York, USA'), (7, 'Joel', 'Edgerton','Razor-sharp cheekbones','New South Wales, Australia'), (8, 'Elijah', 'Wood','Short hobbit stature', 'Iowa, USA'), (9, 'Jake', 'Gyllenhaal','Blue eyes and brown hair','Los Angeles, USA'), (10, 'Mark','Wahlberg','Frequently plays men of authority or criminals','Massachusetts, USA'), (11, 'Matthew', 'McConahay','Known for saying "Alright, alright, alright!"','Texas, USA'), (12, 'Bryan', 'Fogel','Known for voluntary committing himself to doping for a film','Colorado, USA'), (13, 'Robin', 'Williams','Dinstinctive low-pitch and extremely versatile voice','Illinois, USA'), (14, 'Will', 'Smith','Known for his catchphrase, "Aw, hell no!"','Pennsylvania, USA'), (15, 'Jennifer', 'Carpenter','Her ex-husband was her "brother" in the dissapointing series Dexter','Kentucky, USA');
 UNLOCK TABLES;
 
 --

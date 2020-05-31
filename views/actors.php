@@ -1,25 +1,44 @@
 <?php
 
 $pageTitle = "Actor Page";
-
+include("../backend/db_connection.php");
 include("header.php");	?>
 
 		<div class="container grid">
 			<div class="row justify-content-center">
+				<?php
+					$conn = OpenCon();
+					$result = $conn->query("SELECT * FROM actor") or die($conn->error);
+				?>
+				<h1>Browse all Actors</h1>
 				<table class="table">
-					<thead> Displaying All Actors
-						<tr>
-							<th>Actor ID</th>
+					<thead>
+						<tr class="header-row">
 							<th>First Name</th>
 							<th>Last Name</th>
+							<th>Trademark</th>
+							<th>Place of Origin</th>
 						</tr>
 					</thead>
+					<?php
+					while($row = $result->fetch_assoc()):
+					?>
 					<tr>
-						<td>1</td>
-						<td>Matt</td>
-						<td>Damon</td>
+						<td><?php echo $row['first_name']; ?></td>
+						<td><?php echo $row['last_name']; ?></td>
+						<td><?php echo $row['trademark']; ?></td>
+						<td><?php echo $row['birth_location']; ?></td>
 					</tr>
+					<?php endwhile; ?>
 				</table>
+			
+				<?php
+				function pre_r($array){
+					echo '<pre>';
+					print_r($array);
+					echo '</pre>';
+				}
+				?>
 			</div>
 		</div>
 	</div>

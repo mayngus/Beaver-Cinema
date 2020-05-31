@@ -5,11 +5,12 @@ $pageTitle = "Home Page";
 include("header.php");	?>
 		<div class="container grid">
 			<div class="box title">
-				<h2 class="title">Trending this Week</h2>
+				<h1 class="title">Trending this Week</h1>
 			</div>
 			<div class="box movies">
 				<div class="movie-card">
 					<img src="../styling/images/contagion.jpg" alt="contagion">
+					<h3><a>View Details</a></h3>
 				</div>
 				<div class="movie-card">
 					<img src="../styling/images/outbreak.jpg" alt="outbreak">
