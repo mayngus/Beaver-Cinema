@@ -5,32 +5,42 @@ $pageTitle = "Update";
 include("header.php");	?>
 
 		<div class="container grid">
-			<div class="row justify-content-center">
-				<table class="table">
-					<thead>
-						<tr>
-							<th>Movie Title</th>
-							<th>Starring Actor ID</th>
-							<th>Genre</th>
-							<th>Price</th>
-							<th>Rating</th>
-							<th>Number in Stock</th>
-							<th>Actions</th>
-						</tr>
-					</thead>
+			<h1>Update Database</h1>
+			<div class="tbl-header">
+			<table>
+				<thead>
 					<tr>
-						<td>Contagion</td>
-						<td>2</td>
-						<td>Drama</td>
-						<td>$10.50</td>
-						<td>4.4</td>
-						<td>5</td>
-						<td>
-							<a href="#">Edit</a>
-							<a href="#">Delete</a>
-						</td>
+						<th>Blank</th>
+						<th>Blank</th>
+						<th>Blank</th>
+						<th>Blank</th>
+						<th>Blank</th>
 					</tr>
-				</table>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Blank</td>
+						<td>Blank</td>
+						<td>Blank</td>
+						<td>Blank</td>
+						<td>Blank</td>
+					</tr>
+					<tr>
+						<td>Blank</td>
+						<td>Blank</td>
+						<td>Blank</td>
+						<td>Blank</td>
+						<td>Blank</td>
+					</tr>
+					<tr>
+						<td>Blank</td>
+						<td>Blank</td>
+						<td>Blank</td>
+						<td>Blank</td>
+						<td>Blank</td>
+					</tr>
+				</tbody>
+			</table>
 			</div>
 	
 			<?php require_once("insert.php");	?>
@@ -56,9 +66,6 @@ include("header.php");	?>
 						<button type="submit" class="btn btn-primary" name="save">Save</button>
 					</div>
 			</form>
-
-
-			</div>
 		</div>
 	</div>
 
