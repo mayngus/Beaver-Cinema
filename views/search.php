@@ -6,7 +6,7 @@ include("header.php");	?>
 
 		<div class="container grid">
 			<div>
-				<span class="searchTitle">Search Movies</span>
+				<h1>Search Movies</h1>
 			</div>
 			<div class="search movieDb">
 				<input type="text" class="searchTerm" placeholder="Enter Movie Title">
@@ -16,7 +16,7 @@ include("header.php");	?>
 				</button>
 			</div>
 			<div>
-				<span class="searchTitle">Search Actors</span>
+				<h1>Search Actors</h1>
 			</div>
 			<div class="search actorDb">
 				<input type="text" class="searchTerm" placeholder="Enter Actor's First Name">

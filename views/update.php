@@ -5,16 +5,19 @@ $pageTitle = "Update";
 include("header.php");	?>
 
 		<div class="container grid">
-			<h1>Update Database</h1>
+			<h1>Update Customer Database</h1>
 			<div class="tbl-header">
 			<table>
 				<thead>
 					<tr>
-						<th>Blank</th>
-						<th>Blank</th>
-						<th>Blank</th>
-						<th>Blank</th>
-						<th>Blank</th>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Street</th>
+						<th>City</th>
+						<th>State</th>
+						<th>ZIP</th>
+						<th>Phone</th>
+						<th>Email</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -24,21 +27,11 @@ include("header.php");	?>
 						<td>Blank</td>
 						<td>Blank</td>
 						<td>Blank</td>
-					</tr>
-					<tr>
-						<td>Blank</td>
-						<td>Blank</td>
 						<td>Blank</td>
 						<td>Blank</td>
 						<td>Blank</td>
 					</tr>
-					<tr>
-						<td>Blank</td>
-						<td>Blank</td>
-						<td>Blank</td>
-						<td>Blank</td>
-						<td>Blank</td>
-					</tr>
+				
 				</tbody>
 			</table>
 			</div>

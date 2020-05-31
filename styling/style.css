@@ -288,6 +288,14 @@ a.instagram {
 	text-align: center;
 }
 
+.trending {
+	padding: 10px 10px;
+}
+
+.trending a:hover {
+	color: #ca3a3a;
+}
+
 .movies{
 	display:grid;
 	grid-template-columns: repeat(3, .5fr);

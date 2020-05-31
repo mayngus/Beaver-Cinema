@@ -10,13 +10,15 @@ include("header.php");	?>
 			<div class="box movies">
 				<div class="movie-card">
 					<img src="../styling/images/contagion.jpg" alt="contagion">
-					<h3><a>View Details</a></h3>
+					<h3 class="trending"><a href="">View Details</a></h3>
 				</div>
 				<div class="movie-card">
 					<img src="../styling/images/outbreak.jpg" alt="outbreak">
+					<h3 class="trending"><a href="">View Details</a></h3>
 				</div>
 				<div class="movie-card">
 					<img src="../styling/images/28dayslater.jpg" alt="28dayslater">
+					<h3 class="trending"><a href="">View Details</a></h3>
 				</div>
 			</div>
 		</div>
