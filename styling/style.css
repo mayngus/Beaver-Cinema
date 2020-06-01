@@ -340,7 +340,7 @@ table{
 }
 
 .header-row {
-	height: 80px;
+	height: 70px;
 }
 
 th{
@@ -365,7 +365,7 @@ td{
 }
 
 tr {
-	height: 85px;
+	height: 80px;
 }
 
 .center-column {

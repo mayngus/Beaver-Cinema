@@ -9,15 +9,16 @@ include("header.php");	?>
 			<div class="tbl-header">
 			<table>
 				<thead>
-					<tr>
-						<th>First Name</th>
-						<th>Last Name</th>
+					<tr class="header-row">
+						<th>First</th>
+						<th>Last</th>
 						<th>Street</th>
 						<th>City</th>
 						<th>State</th>
 						<th>ZIP</th>
 						<th>Phone</th>
 						<th>Email</th>
+						<th>Action</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -30,6 +31,7 @@ include("header.php");	?>
 						<td>Blank</td>
 						<td>Blank</td>
 						<td>Blank</td>
+						<td></td>
 					</tr>
 				
 				</tbody>
