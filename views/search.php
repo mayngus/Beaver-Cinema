@@ -1,6 +1,10 @@
 <?php
 
-$pageTitle = "Home Page";
+/****************************************************
+ * MIGHT DELETE PAGE AND ADD IT TO 'BROWSE' PAGES *
+****************************************************/
+
+$pageTitle = "Search Page";
 
 include("header.php");	?>
 
