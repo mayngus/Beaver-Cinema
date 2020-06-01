@@ -313,16 +313,7 @@ a.instagram {
 	grid-auto-columns:minmax(100px, auto);
 	justify-items:stretch;
 	align-items:stretch;
-	margin-top: 5rem;
-}
-
-.movies{
-	display:grid;
-	grid-template-columns: repeat(3, .5fr);
-	grid-auto-columns:minmax(100px, auto);
-	justify-items:stretch;
-	align-items:stretch;
-	margin-top: 5rem;
+	margin-top: 1rem;
 }
 
 .box-update{
@@ -381,21 +372,16 @@ table{
 }
 
 .customer-table td:nth-child(1), .customer-table th:nth-child(1), 
-.customer-table th:nth-child(2), .customer-table th:nth-child(2),
-.customer-table th:nth-child(3), .customer-table th:nth-child(3){
-	width: 100px;
+.customer-table th:nth-child(2), .customer-table th:nth-child(2){	
+	width: 150px;
 }
 
-.customer-table td:nth-child(4), .customer-table th:nth-child(4){
-	width: 60px;
+.customer-table td:nth-child(3), .customer-table th:nth-child(3){
+	width: 105px;
 }
 
 .customer-table td:nth-child(5), .customer-table th:nth-child(5){
-	width: 105px;
-}
-
-.customer-table td:nth-child(7), .customer-table th:nth-child(7){
-	width: 105px;
+	width: 135px;
 }
 
 .tbl-content{ 
@@ -457,48 +443,30 @@ tr {
 	width: 200px;
 }
 
-.edit-button input[type="submit"]{
+.edit-button{
 	background: rgb(35, 153, 51);
-	padding: 6px 14px 6px 14px;
+	padding: 2px 10px 2px 10px;
 	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
 	color: #fff;
-	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
 	border: 1px solid rgb(35, 153, 51);
 	font-size: 15px;
-	margin-bottom: 5px;
 }
  
-.edit-button input[type="submit"]:hover{
+.edit-button:hover{
 	background: rgb(28, 122, 40);
-	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
-	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
-	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
 }
 
-.delete-button  input[type="submit"]{
+.delete-button{
 	background: rgb(194, 45, 45);
-	padding: 6px 14px 6px 14px;
+	padding: 2px 10px 2px 10px;
 	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
 	color: #fff;
-	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
 	border: 1px solid rgb(194, 45, 45);
 	font-size: 15px;
-	margin-bottom: 5px;
 }
  
-.delete-button input[type="submit"]:hover{
+.delete-button:hover{
 	background: rgb(138, 32, 32);
-	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
-	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
-	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
 }
 
 /*  =============================================
