@@ -5,13 +5,16 @@ include("../backend/db_connection.php");
 include("header.php");	?>
 
 		<div class="container grid">
-			<div class="row justify-content-center">
+			<div class="box title">
+				<h2 class="title">Browse All Actors</h2>
+				<hr>
+			</div>
+			<div class="row table">
 				<?php
 					$conn = OpenCon();
 					$result = $conn->query("SELECT * FROM actor") or die($conn->error);
 				?>
-				<h1>Browse all Actors</h1>
-				<table class="table">
+				<table class="actor-table">
 					<thead>
 						<tr class="header-row">
 							<th>First Name</th>

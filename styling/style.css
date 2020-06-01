@@ -272,7 +272,7 @@ a.instagram {
 	CSS Grid
 ================================================ */
 .grid{
-	display:grid;
+	display: grid;
 	grid-template-columns: 1fr;
 	grid-gap: 0.5em;
 	justify-items:stretch;
@@ -282,9 +282,19 @@ a.instagram {
 }
 
 .title {
-	max-height: 30px;
 	margin-bottom: 1.5rem;
 	margin-top: 1.5rem;
+	text-align: center;
+}
+
+.form {
+	margin-bottom: 1.5rem;
+	margin-top: 1.5rem;
+	text-align: center;
+}
+
+.table-box {
+	margin-bottom: 1.5rem;
 	text-align: center;
 }
 
@@ -303,6 +313,24 @@ a.instagram {
 	justify-items:stretch;
 	align-items:stretch;
 	margin-top: 5rem;
+}
+
+.movies{
+	display:grid;
+	grid-template-columns: repeat(3, .5fr);
+	grid-auto-columns:minmax(100px, auto);
+	justify-items:stretch;
+	align-items:stretch;
+	margin-top: 5rem;
+}
+
+.box-update{
+	display:grid;
+	grid-template-columns: 1fr 2fr;
+	grid-auto-columns:minmax(200px, auto);
+	justify-items:stretch;
+	align-items:stretch;
+	margin-top: 0.5rem;
 }
 
 .movie-card h3 {
@@ -325,11 +353,48 @@ a.instagram {
 	Table Styling
 ================================================ */
 table{
-	width:100%;
+	width: 85%;
 	table-layout: fixed;
 	padding: 0;
 	border-spacing: 0;
 	border: 2px solid rgb(49, 49, 49);
+	margin: 0 auto;
+}
+
+.customer-table{
+	width: 100%;
+}
+
+.customer-table th {
+	font-size: 15px;
+	word-wrap: break-word;
+}
+
+.customer-table .header-row {
+	height: 50px;
+}
+
+.customer-table td {
+	font-size: 15;
+	word-wrap: break-word;
+}
+
+.customer-table td:nth-child(1), .customer-table th:nth-child(1), 
+.customer-table th:nth-child(2), .customer-table th:nth-child(2),
+.customer-table th:nth-child(3), .customer-table th:nth-child(3){
+	width: 100px;
+}
+
+.customer-table td:nth-child(4), .customer-table th:nth-child(4){
+	width: 60px;
+}
+
+.customer-table td:nth-child(5), .customer-table th:nth-child(5){
+	width: 105px;
+}
+
+.customer-table td:nth-child(7), .customer-table th:nth-child(7){
+	width: 105px;
 }
 
 .tbl-content{ 
@@ -340,12 +405,13 @@ table{
 }
 
 .header-row {
-	height: 70px;
+	height: 60px;
 }
 
 th{
-	padding: 20px 15px;
-	font-size: 20px;
+	text-align: left;
+	padding: 5px 5px;
+	font-size: 18px;
 	color: #fff;
 	text-transform: uppercase;
 	background: rgb(48, 46, 46);
@@ -353,7 +419,7 @@ th{
 }
 
 td{
-	padding: 12px;
+	padding: 5px;
 	text-align: left;
 	vertical-align:middle;
 	font-weight: 300;
@@ -365,9 +431,110 @@ td{
 }
 
 tr {
-	height: 80px;
+	height: 55px;
 }
 
 .center-column {
 	text-align: center;
+}
+
+.movie-table td:nth-child(2), .movie-table th:nth-child(2), 
+.movie-table th:nth-child(3), .movie-table th:nth-child(3){
+	width: 120px;
+}
+
+.actor-table td:nth-child(1), .actor-table th:nth-child(1), 
+.actor-table th:nth-child(2), .actor-table th:nth-child(2){
+	width: 160px;
+}
+
+.edit-button input[type="submit"]{
+	background: rgb(35, 153, 51);
+	padding: 8px 20px 8px 20px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: #fff;
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	border: 1px solid rgb(35, 153, 51);
+	font-size: 15px;
+	margin-bottom: 5px;
+}
+ 
+.edit-button input[type="submit"]:hover{
+	background: rgb(28, 122, 40);
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+}
+
+.delete-button  input[type="submit"]{
+	background: rgb(194, 45, 45);
+	padding: 8px 20px 8px 20px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: #fff;
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	border: 1px solid rgb(194, 45, 45);
+	font-size: 15px;
+	margin-bottom: 5px;
+}
+ 
+.delete-button input[type="submit"]:hover{
+	background: rgb(138, 32, 32);
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+}
+
+/*  =============================================
+	Form Styling
+================================================ */
+
+.edit-customer-form input[type="text"],
+.edit-customer-form input[type="email"],
+.edit-customer-form input[type="number"],
+.edit-customer-form input[type="tel"] {
+	background: rgba(255,255,255,.1);
+	border: none;
+	border-radius: 4px;
+	font-size: 15px;
+	margin: 0;
+	outline: 0;
+	padding: 10px;
+	width: 85%;
+	box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	background-color: #e8eeef;
+	color:#666666;
+	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	margin-bottom: 10px;
+}
+
+.edit-customer-form input[type="submit"]{
+	background: rgb(45, 122, 194);
+	padding: 8px 20px 8px 20px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: #fff;
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	border: 1px solid rgb(37, 100, 158);
+	font-size: 15px;
+}
+ 
+.edit-customer-form input[type="submit"]:hover{
+	background: rgb(37, 100, 158);
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
 }
