@@ -45,6 +45,11 @@ include("header.php");	?>
 				<!-- This is the Table section -->
 				<div class="box tbl-header table-box">
 					<h3>Customers in Database</h3>
+					<?php
+					$mysqli = OpenCon();
+					$result = $mysqli->query("SELECT * FROM customer") or die($mysqli->error);
+
+					?>
 					<table class="customer-table">
 						<thead>
 							<tr class="header-row">
@@ -57,17 +62,19 @@ include("header.php");	?>
 							</tr>
 						</thead>
 						<tbody>
+							<?php	while ($row = $result->fetch_assoc()): ?>
 							<tr>
-								<td><a href="#" class="name-button">Geraldo</a></td>
-								<td>Hernandez</td>
-								<td>9099 SE University Dr, Corvallis, OR 97024</td>
-								<td>5031234567</td>
-								<td>geraldo@fakemail.com</td>
+								<td><a href="#" class="name-button"><?= $row['first_name']; ?></a></td>
+								<td><?= $row['last_name']; ?></td>
+								<td><?= $row['address']; ?></td>
+								<td><?= $row['phone']; ?></td>
+								<td><?= $row['email']; ?></td>
 								<td>
 									<a href="#" class="edit-button" value="Edit">Edit</a>
 									<a href="#" class="delete-button" value="Delete">Delete</a>
 								</td>
 							</tr>
+							<?php endwhile; ?>
 						</tbody>
 					</table>
 				</div>

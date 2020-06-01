@@ -38,8 +38,7 @@ include("../backend/db_connection.php");	?>
 						</tr>
 					</thead>
 					<tbody>
-					<?php
-					while ($row = $result->fetch_assoc()): ?>
+					<?php	while ($row = $result->fetch_assoc()): ?>
 						<tr>
 							<td><?php echo $row['title']; ?></td>
 							<td class="center-column"><?php echo '$'; echo $row['price']; ?></td>
