@@ -1,7 +1,7 @@
 <?php
 
 $pageTitle = "Update";
-
+include("action.php");
 include("header.php");	?>
 		<!-- This is the start of CSS Grid style -->
 		<div class="container grid">
@@ -9,15 +9,19 @@ include("header.php");	?>
 			<div class="box title">
 				<h2 class="title">Update Customer Database</h2>
 				<hr>
+				<?php	if(isset($_SESSION['response'])){	?>
+				<div class="alert <?php echo $_SESSION['res_type']; ?>">
+					<strong><?php echo $_SESSION['response']; ?></strong>
+				</div>
+				<?php } unset($_SESSION['response']); ?>
 			</div>
 
 			<div class="box box-update">
 				<!-- This is the POST form section -->
 				<div class="edit-customer-form">
 					<h3>Add/Edit Customer</h3>
-					<?php require_once("insert.php");	?>
 					
-					<form action="#" method="POST" enctype="multipart/form-data">
+					<form action="action.php" method="POST" enctype="multipart/form-data">
 							<div class="form-group">
 								<input type="text" name="first_name" class="form-control" placeholder="Enter first name" required>
 							</div>
@@ -34,7 +38,7 @@ include("header.php");	?>
 								<input type="text" name="email_address" class="form-control" placeholder="Enter email address" required>
 							</div>
 							<div class="form-group">
-								<input type="submit" class="btn btn-primary" name="save" value="Submit"></button>
+								<input type="submit" class="btn btn-primary" name="submit" value="Submit"></button>
 							</div>
 					</form>
 				</div>
@@ -44,8 +48,8 @@ include("header.php");	?>
 					<table class="customer-table">
 						<thead>
 							<tr class="header-row">
-								<!-- find a way to merge 'first' and 'last' name sql data -->
-								<th>Name</th>
+								<th>First</th>
+								<th>Last</th>
 								<th>Address</th>
 								<th>Phone</th>
 								<th>Email</th>
@@ -54,7 +58,8 @@ include("header.php");	?>
 						</thead>
 						<tbody>
 							<tr>
-								<td><a href="#" class="name-button">Geraldo Hernandez</a></td>
+								<td><a href="#" class="name-button">Geraldo</a></td>
+								<td>Hernandez</td>
 								<td>9099 SE University Dr, Corvallis, OR 97024</td>
 								<td>5031234567</td>
 								<td>geraldo@fakemail.com</td>

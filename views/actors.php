@@ -1,8 +1,8 @@
 <?php
 
 $pageTitle = "Actor Page";
-include("../backend/db_connection.php");
-include("header.php");	?>
+include("header.php");
+include("../backend/db_connection.php");	?>
 
 		<div class="container grid">
 			<div class="box title">
