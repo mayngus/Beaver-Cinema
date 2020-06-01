@@ -53,7 +53,7 @@ include("header.php");	?>
 						</thead>
 						<tbody>
 							<tr>
-								<td>Geraldo Hernandez</td>
+								<td><a href="#" class="name-button">Geraldo Hernandez</a></td>
 								<td>9099 SE University Dr, Corvallis, OR 97024</td>
 								<td>5031234567</td>
 								<td>geraldo@fakemail.com</td>

@@ -469,6 +469,11 @@ tr {
 	background: rgb(138, 32, 32);
 }
 
+.name-button:hover {
+	text-decoration: underline;
+	color: rgb(49, 49, 49);
+}
+
 /*  =============================================
 	Form Styling
 ================================================ */
