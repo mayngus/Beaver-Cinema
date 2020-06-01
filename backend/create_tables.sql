@@ -11,10 +11,7 @@ CREATE TABLE `customer` (
 	`customer_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
 	`first_name` varchar(45) NOT NULL,
 	`last_name` varchar(45) NOT NULL,
-	`street` int(11) unsigned NOT NULL,
-	`city` varchar(50) DEFAULT NULL,
-	`state` varchar(50) DEFAULT NULL,
-	`zip` int(11) unsigned NOT NULL,
+	`address` varchar(45) NOT NULL,
 	`phone` varchar(50) DEFAULT NULL,
 	`email` varchar(50) DEFAULT NULL,
 	PRIMARY KEY (`customer_id`)
@@ -24,7 +21,7 @@ CREATE TABLE `customer` (
 -- Insertion queries for table `customer`
 --
 LOCK TABLES `customer` WRITE;
-INSERT INTO `customer` VALUES (1,'Jimmy', 'John', '4134 Monroe Ave', 'Corvallis', 'OR', 97330, 5034150290, 'jjohn@gmail.com'), (2,'Carla', 'Ruiz', '4153 Jefferson Ave', 'Portland', 'OR', 97230, 5034150146, 'carlaruiz@gmail.com'), (3,'Joseph', 'McTavern', '2351 Paola Drive', 'Beaverton', 'OR', 97204, 5034150913, 'josephtavern@gmail.com'), (4,'Miguel', 'Espinoza', '12315 Stark Street', 'Gresham', 'OR', 97033, 5039310492, 'migueltheking@gmail.com'), (5,'Leonardo', 'Robertson', '1951 Stone Drive', 'Portland', 'OR', 97230, 5034157592, 'leonardoception@gmail.com');
+INSERT INTO `customer` VALUES (1,'Jimmy', 'John', '4134 Monroe Ave, Corvallis, OR 97330', 5034150290, 'jjohn@gmail.com'), (2,'Carla', 'Ruiz', '4153 Jefferson Ave, Portland, OR 97230', 5034150146, 'carlaruiz@gmail.com'), (3,'Joseph', 'McTavern', '2351 Paola Drive, Beaverton, OR 97204', 5034150913, 'josephtavern@gmail.com'), (4,'Miguel', 'Espinoza', '12315 Stark Street, Gresham, OR 97033', 5039310492, 'migueltheking@gmail.com'), (5,'Leonardo', 'Robertson', '1951 Stone Drive, Portland, OR 97230', 5034157592, 'leonardoception@gmail.com');
 UNLOCK TABLES;
 
 --
