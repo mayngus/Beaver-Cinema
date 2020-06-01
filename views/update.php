@@ -63,7 +63,7 @@ include("header.php");	?>
 								<td>9099 SE University Dr.</td>
 								<td>97024</td>
 								<td>5031234567</td>
-								<td>geraldo.hernandez@fakemail.com</td>
+								<td>geraldo@fakemail.com</td>
 								<td>
 									<div class="edit-button">
 										<input type="submit" name="edit" value="Edit"></button>

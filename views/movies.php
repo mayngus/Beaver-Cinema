@@ -11,12 +11,24 @@ include("header.php");	?>
 					<hr>
 				</div>
 			<div class="box tbl-header">
+
+			<form action="/action_page.php">
+				<label for="genre-list">Display by Genre:</label>
+				<select id="genre-list" name="genre-list">
+					<option value="action">Action</option>
+					<option value="action">Adventure</option>
+					<option value="comedy">Comedy</option>
+					<option value="horror">Horror</option>
+				</select>
+				<input type="submit" value="Submit">
+			</form>
 				<?php
 				$mysqli = OpenCon();
 				$result = $mysqli->query("SELECT * FROM movies") or die($mysqli->error);
 
 				?>
 				<table class="movie-table">
+					
 					<thead>
 						<tr class="header-row">
 							<th>Title</th>

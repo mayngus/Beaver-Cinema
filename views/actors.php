@@ -10,6 +10,14 @@ include("header.php");	?>
 				<hr>
 			</div>
 			<div class="row table">
+				<form action="/action_page.php">
+					<label for="actor-list">Sort by:</label>
+					<select id="actor-list" name="actor-list">
+						<option value="action">First Name</option>
+						<option value="action">Last Name</option>
+					</select>
+					<input type="submit" value="Submit">
+				</form>
 				<?php
 					$conn = OpenCon();
 					$result = $conn->query("SELECT * FROM actor") or die($conn->error);
