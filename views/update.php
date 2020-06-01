@@ -44,6 +44,7 @@ include("header.php");	?>
 					<table class="customer-table">
 						<thead>
 							<tr class="header-row">
+								<!-- find a way to merge 'first' and 'last' name sql data -->
 								<th>Name</th>
 								<th>Address</th>
 								<th>Phone</th>
