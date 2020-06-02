@@ -63,23 +63,20 @@ include("header.php");	?>
 						</thead>
 						<tbody>
 							<?php	while ($row = $result->fetch_assoc()): ?>
-							<tr>
-								<td><a href="#" class="name-button"><?= $row['first_name']; ?></a></td>
-								<td><?= $row['last_name']; ?></td>
-								<td><?= $row['address']; ?></td>
-								<td><?= $row['phone']; ?></td>
-								<td><?= $row['email']; ?></td>
-								<td>
+								<tr>
+									<td><a href="#" class="name-button"><?php $row['first_name']; ?></a></td>
+									<td><?php $row['last_name']; ?></td>
+									<td><?php $row['address']; ?></td>
+									<td><?php $row['phone']; ?></td>
+									<td><?php $row['email']; ?></td>
+									<td>
+										<a href="action.php?edit= <?php echo $row['id']; ?>" 
+											class="edit-button">EDIT</a>
 
-									<a href="action.php?edit=<?php echo $row['id']; ?>" 
-										class="edit-button">EDIT</a>
-
-
-									<a href="action.php?delete=<?php echo $row['id']; ?>" 
-										class="delete-button">DELETE</a>
-
-								</td>
-							</tr>
+										<a href="action.php?delete=<?php echo $row['id']; ?>" 
+											class="delete-button">DELETE</a>
+									</td>
+								</tr>
 							<?php endwhile; ?>
 						</tbody>
 					</table>
