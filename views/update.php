@@ -64,11 +64,11 @@ include("header.php");	?>
 						<tbody>
 							<?php	while ($row = $result->fetch_assoc()): ?>
 								<tr>
-									<td><a href="#" class="name-button"><?php $row['first_name']; ?></a></td>
-									<td><?php $row['last_name']; ?></td>
-									<td><?php $row['address']; ?></td>
-									<td><?php $row['phone']; ?></td>
-									<td><?php $row['email']; ?></td>
+									<td><a href="#" class="name-button"><?php echo $row['first_name']; ?></a></td>
+									<td><?php echo $row['last_name']; ?></td>
+									<td><?php echo $row['address']; ?></td>
+									<td><?php echo $row['phone']; ?></td>
+									<td><?php echo $row['email']; ?></td>
 									<td>
 										<a href="action.php?edit= <?php echo $row['id']; ?>" 
 											class="edit-button">EDIT</a>
