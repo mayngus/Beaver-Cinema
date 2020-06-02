@@ -70,8 +70,13 @@ include("header.php");	?>
 								<td><?= $row['phone']; ?></td>
 								<td><?= $row['email']; ?></td>
 								<td>
-									<a href="#" class="edit-button" value="Edit">Edit</a>
-									<a href="#" class="delete-button" value="Delete">Delete</a>
+									<a href="action.php?edit=<?php echo $row['id']; ?>" 
+										class="edit-button" value="Edit">Delete</a>
+
+
+									<a href="action.php?delete=<?php echo $row['id']; ?>" 
+										class="delete-button" value="Delete">Delete</a>
+
 								</td>
 							</tr>
 							<?php endwhile; ?>
