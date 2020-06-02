@@ -72,11 +72,11 @@ include("header.php");	?>
 								<td>
 
 									<a href="action.php?edit=<?php echo $row['id']; ?>" 
-										class="edit-button" value="edit">EDIT</a>
+										class="edit-button">EDIT</a>
 
 
 									<a href="action.php?delete=<?php echo $row['id']; ?>" 
-										class="delete-button" value="delete">DELETE</a>
+										class="delete-button">DELETE</a>
 
 								</td>
 							</tr>
