@@ -72,10 +72,10 @@ include("header.php");	?>
 									<td><?php echo $row['phone']; ?></td>
 									<td><?php echo $row['email']; ?></td>
 									<td>
-										<a href="action.php?edit=<?php echo $row['customerID']; ?>" 
+										<a href="action.php?edit=<?php echo $row['customer_id']; ?>" 
 											class="edit-button">Edit</a>
 
-										<a href="action.php?delete=<?php echo $row['customerID']; ?>" 
+										<a href="action.php?delete=<?php echo $row['customer_id']; ?>" 
 											class="delete-button">Delete</a>
 									</td>
 								</tr>

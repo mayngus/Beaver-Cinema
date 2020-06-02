@@ -32,8 +32,8 @@
 
 		// begin query
 		$conn->query("DELETE FROM customer
-					  WHERE customerID=$id")
-					  or die($conn->error());
+					  WHERE customer_id=$id")
+					  or die($conn->error);
 
 		// return to current page
 		header('location:update.php');
