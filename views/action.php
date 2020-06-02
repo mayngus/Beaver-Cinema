@@ -5,6 +5,7 @@
 
 	if(isset($_POST['submit'])){
 
+		// set variables
 		$first_name = $_POST['first_name'];
 		$last_name = $_POST['last_name'];
 		$address = $_POST['address'];
@@ -23,4 +24,23 @@
 		$_SESSION['response']="SUCCESSFULLY INSERTED TO DB";
 		$_SESSION['res_type']="success-button";
 	}
+
+	if(isset($_GET['delete'])){
+
+		// set variable
+		$id = $_GET['delete'];
+
+		// begin query
+		$conn->query("DELETE FROM customer
+					  WHERE id=$id")
+					  or die($conn->error);
+
+		// return to current page
+		header('location:update.php');
+
+		// success messages to echo at update.php
+		$_SESSION['response']="SUCCESSFULLY DELETED";
+		$_SESSION['res_type']="success-button";
+	}
+
 ?>
