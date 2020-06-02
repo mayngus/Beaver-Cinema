@@ -32,7 +32,7 @@
 
 		// begin query
 		$conn->query("DELETE FROM customer
-					  WHERE id=$id")
+					  WHERE customerID=$id")
 					  or die($conn->error());
 
 		// return to current page
