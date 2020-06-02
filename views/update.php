@@ -46,8 +46,9 @@ include("header.php");	?>
 				<div class="box tbl-header table-box">
 					<h3>Customers in Database</h3>
 					<?php
-					$mysqli = OpenCon();
-					$result = $mysqli->query("SELECT * FROM customer") or die($mysqli->error);
+
+						$mysqli = OpenCon();
+						$result = $mysqli->query("SELECT * FROM customer") or die($mysqli->error);
 
 					?>
 					<table class="customer-table">
@@ -61,24 +62,25 @@ include("header.php");	?>
 								<th>Action</th>
 							</tr>
 						</thead>
-						<tbody>
-							<?php	while ($row = $result->fetch_assoc()): ?>
+						
+						<?php
+							while ($row = $result->fetch_assoc()): ?>
 								<tr>
-									<td><a href="#" class="name-button"><?php echo $row['first_name']; ?></a></td>
+									<td><?php echo $row['first_name']; ?></td>
 									<td><?php echo $row['last_name']; ?></td>
 									<td><?php echo $row['address']; ?></td>
 									<td><?php echo $row['phone']; ?></td>
 									<td><?php echo $row['email']; ?></td>
 									<td>
-										<a href="action.php?edit= <?php echo $row['id']; ?>" 
-											class="edit-button">EDIT</a>
+										<a href="action.php?edit=<?php echo $row['id']; ?>" 
+											class="edit-button">Edit</a>
 
 										<a href="action.php?delete=<?php echo $row['id']; ?>" 
-											class="delete-button">DELETE</a>
+											class="delete-button">Delete</a>
 									</td>
 								</tr>
-							<?php endwhile; ?>
-						</tbody>
+						<?php endwhile; ?>
+						
 					</table>
 				</div>
 			</div>
