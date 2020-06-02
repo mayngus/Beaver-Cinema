@@ -22,23 +22,31 @@ include("header.php");	?>
 					<h3>Add/Edit Customer</h3>
 					
 					<form action="action.php" method="POST" enctype="multipart/form-data">
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							<div class="form-group">
-								<input type="text" name="first_name" class="form-control" placeholder="Enter first name" required>
+								<input type="text" name="first_name" value="<?php echo $first_name; ?>" class="form-control" placeholder="Enter first name" required>
 							</div>
 							<div class="form-group">
-								<input type="text" name="last_name" class="form-control" placeholder="Enter last name" required>
+								<input type="text" name="last_name" value="<?php echo $last_name; ?>" class="form-control" placeholder="Enter last name" required>
 							</div>
 							<div class="form-group">
-								<input type="text" name="address" class="form-control" placeholder="Enter street, city, state, zip" required>
+								<input type="text" name="address" value="<?php echo $address; ?>" class="form-control" placeholder="Enter street, city, state, zip" required>
 							</div>
 							<div class="form-group">
-								<input type="tel" name="phone" class="form-control" placeholder="Enter phone number" required>
+								<input type="text" name="phone" value="<?php echo $phone; ?>" class="form-control" placeholder="Enter phone number" required>
 							</div>
 							<div class="form-group">
-								<input type="text" name="email_address" class="form-control" placeholder="Enter email address" required>
+								<input type="text" name="email" value="<?php echo $email; ?>" class="form-control" placeholder="Enter email address" required>
 							</div>
 							<div class="form-group">
-								<input type="submit" class="btn btn-primary" name="submit" value="Submit"></button>
+								<!-- check if user clicked "Edit" button -->
+								<?php if($isEdit==true){ ?>
+									<input type="submit" class="button-edit" name="edit" value="Submit Customer">
+								
+								<!-- else, default to "Submit" button for webpage -->
+								<?php	}else{ ?>
+									<input type="submit" class="button-submit" name="submit" value="Submit Changes">
+								<?php	} ?>
 							</div>
 					</form>
 				</div>
@@ -66,13 +74,13 @@ include("header.php");	?>
 						<?php
 							while ($row = $result->fetch_assoc()): ?>
 								<tr>
-									<td><?php echo $row['first_name']; ?></td>
+									<td><a href="#" class="name-button"><?php echo $row['first_name']; ?></a></td>
 									<td><?php echo $row['last_name']; ?></td>
 									<td><?php echo $row['address']; ?></td>
 									<td><?php echo $row['phone']; ?></td>
 									<td><?php echo $row['email']; ?></td>
 									<td>
-										<a href="action.php?edit=<?php echo $row['customer_id']; ?>" 
+										<a href="update.php?edit=<?php echo $row['customer_id']; ?>" 
 											class="edit-button">Edit</a>
 
 										<a href="action.php?delete=<?php echo $row['customer_id']; ?>" 

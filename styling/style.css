@@ -475,7 +475,7 @@ tr {
 
 .name-button:hover {
 	text-decoration: underline;
-	color: rgb(49, 49, 49);
+	color: rgb(12, 122, 211);
 }
 
 /*  =============================================
@@ -504,7 +504,7 @@ tr {
 	margin-bottom: 10px;
 }
 
-.edit-customer-form input[type="submit"]{
+.button-submit{
 	background: rgb(45, 122, 194);
 	padding: 8px 20px 8px 20px;
 	border-radius: 5px;
@@ -517,11 +517,28 @@ tr {
 	border: 1px solid rgb(37, 100, 158);
 	font-size: 15px;
 }
- 
-.edit-customer-form input[type="submit"]:hover{
+
+.button-submit:hover{
 	background: rgb(37, 100, 158);
-	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
-	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+}
+
+.button-edit{
+	background: rgb(35, 153, 51);
+	padding: 8px 20px 8px 20px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: #fff;
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	border: 1px solid rgb(35, 153, 51);
+	font-size: 15px;
+}
+
+.button-edit:hover{
+	background: rgb(23, 105, 34);
 	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
 }
 
@@ -534,9 +551,16 @@ tr {
 	width: 90%
 }
 
-.success-button{
-	padding: 20px;
+.success-alert{
+	padding: 15px;
 	background-color: rgb(82, 197, 98);
+	border-radius: 15px;
+	color: white;
+}
+
+.delete-alert{
+	padding: 15px;
+	background-color: rgb(206, 62, 62);
 	border-radius: 15px;
 	color: white;
 }
