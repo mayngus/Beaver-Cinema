@@ -30,13 +30,13 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `orders`;
 CREATE TABLE `orders` (
 	`order_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-	`customer_id` int(11) unsigned NOT NULL,
+	`customer_id` int(11) unsigned,
 	`credit_number` int(11) NOT NULL,
 	`credit_exp` int(11) NOT NULL,
 	`order_date` datetime NOT NULL,
 	`delivery` varchar(255) NOT NULL,
 	PRIMARY KEY (`order_id`),
-	CONSTRAINT `fk_order_customer` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON UPDATE CASCADE
+	CONSTRAINT `fk_order_customer` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE SET NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 --
